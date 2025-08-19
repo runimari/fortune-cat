@@ -153,7 +153,7 @@ export default function FortuneTeller() {
         style={{
             position: "absolute",
             left: "46%",
-            bottom: "115px",
+            bottom: "15.5%",
             transform: "translateX(-50%)",
             width: "20%",
             maxWidth: "60%",
