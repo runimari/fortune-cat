@@ -185,303 +185,268 @@ export default function FortuneTeller() {
       )}
 
       <div
+        style={{
+            position: "absolute",
+            left: "69.6%",          
+            top: "17.5%",             
+            transform: "translate(-50%, -50%)",
+            width: "2.9%",
+            zIndex: 2,
+        }}
         onMouseEnter={() => setIsHoveringPotion1(true)}
         onMouseLeave={() => setIsHoveringPotion1(false)}
-        style={{
-          position: "absolute",
-          right: "423px",
-          top: "71px",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          cursor: mode === "idle" ? "pointer" : "default",
-          zIndex: 2,
-        }}
       >
-        <div
-          style={{
-            width: "130px",
-            height: "130px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            overflow: "hidden",
-          }}
-        >
-          <img
+
+        <img
             src="potion1.png"
             alt="purple potion"
             style={{
-              width: "130px",
-              left: "50%",
-              top: "50%",
-              transition: "transform 0.1s ease",
-              transform: IsHoveringPotion1 && mode === "idle" ? "scale(1.1)" : "scale(1)",
-              transformOrigin: "center",
-              imageRendering: "pixelated",
+            width: "100%",
+            height: "auto",
+            display: "block",
+            imageRendering: "pixelated",
+            transition: "transform 0.1s ease",
+            transform: IsHoveringPotion1 && mode === "idle" ? "scale(1.1)" : "scale(1)",
+            transformOrigin: "center",
             }}
-          />
-        </div>
+        />
+
         {IsHoveringPotion1 && mode === "idle" && (
-            <div
+          <div
             style={{
-                position: "absolute",
-                top: "114px",
-                backgroundColor: "#fff8c9",
-                border: "3px solid #6e361a",
-                borderRadius: "4px",
-                padding: "0.6rem 1rem",
-                fontSize: "0.8rem",
-                fontFamily: "'Quintessential', monospace",
-                color: "#3e1e00",
-                minWidth: "200px",
-                textAlign: "center",
-                boxShadow: "2px 2px 6px rgba(0, 0, 0, 0.2)",
+            position: "absolute",
+            top: "100%",
+            left: "50%",
+            transform: "translateX(-50%)",
+            marginTop: "8px",
+            backgroundColor: "#fff8c9",
+            border: "3px solid #6e361a",
+            borderRadius: "4px",
+            padding: "0.6rem 1rem",
+            fontSize: "0.8rem",
+            fontFamily: "'Quintessential', monospace",
+            color: "#3e1e00",
+            minWidth: "200px",
+            textAlign: "center",
+            boxShadow: "2px 2px 6px rgba(0, 0, 0, 0.2)",
+            whiteSpace: "normal",
             }}
-            >
-              This is my top-secret potion base... well, it’s just purple food coloring and glitter.
-            </div>
+          >
+            This is my top-secret potion base... well, it’s just purple food coloring and glitter.
+          </div>
         )}
       </div>
 
       <div
+        style={{
+            position: "absolute",
+            left: "52.6%",          
+            top: "34.5%",             
+            transform: "translate(-50%, -50%)",
+            width: "3.1%",
+            zIndex: 2,
+        }}
         onMouseEnter={() => setIsHoveringPotion2(true)}
         onMouseLeave={() => setIsHoveringPotion2(false)}
-        style={{
-          position: "absolute",
-          right: "696px",
-          top: "195px",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          cursor: mode === "idle" ? "pointer" : "default",
-          zIndex: 2,
-        }}
       >
-        <div
-          style={{
-            width: "127px",
-            height: "127px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            overflow: "hidden",
-          }}
-        >
-          <img
+
+        <img
             src="potion2.png"
-            alt="dark potion"
+            alt="blue potion"
             style={{
-              width: "127px",
-              left: "50%",
-              top: "50%",
-              transition: "transform 0.1s ease",
-              transform: IsHoveringPotion2 && mode === "idle" ? "scale(1.1)" : "scale(1)",
-              transformOrigin: "center",
-              imageRendering: "pixelated",
+            width: "100%",
+            height: "auto",
+            display: "block",
+            imageRendering: "pixelated",
+            transition: "transform 0.1s ease",
+            transform: IsHoveringPotion2 && mode === "idle" ? "scale(1.1)" : "scale(1)",
+            transformOrigin: "center",
             }}
-          />
-        </div>
+        />
+
         {IsHoveringPotion2 && mode === "idle" && (
-            <div
+          <div
             style={{
-                position: "absolute",
-                top: "40px",
-                left: "100px",
-                backgroundColor: "#fff8c9",
-                border: "3px solid #6e361a",
-                borderRadius: "4px",
-                padding: "0.6rem 1rem",
-                fontSize: "0.8rem",
-                fontFamily: "'Quintessential', monospace",
-                color: "#3e1e00",
-                minWidth: "170px",
-                textAlign: "center",
-                boxShadow: "2px 2px 6px rgba(0, 0, 0, 0.2)",
+            position: "absolute",
+            top: "50%",
+            left: "100%",
+            transform: "translateY(-50%)",
+            marginLeft: "8px",
+            backgroundColor: "#fff8c9",
+            border: "3px solid #6e361a",
+            borderRadius: "4px",
+            padding: "0.6rem 1rem",
+            fontSize: "0.8rem",
+            fontFamily: "'Quintessential', monospace",
+            color: "#3e1e00",
+            minWidth: "200px",
+            textAlign: "center",
+            boxShadow: "2px 2px 6px rgba(0, 0, 0, 0.2)",
+            whiteSpace: "normal",
             }}
-            >
-              Do not combine with moonlight or tax fraud. Trust.
-            </div>
+          >
+            Tastes like sour apples and regret.
+          </div>
         )}
+        
       </div>
 
       <div
-        onMouseEnter={() => setIsHoveringBook1(true)}
-        onMouseLeave={() => setIsHoveringBook1(false)}
         style={{
-          position: "absolute",
-          right: "227px",
-          top: "185px",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          cursor: mode === "idle" ? "pointer" : "default",
-          zIndex: 2,
+            position: "absolute",
+            left: "73.8%",          
+            top: "50.2%",             
+            transform: "translate(-50%, -50%)",
+            width: "3.7%",
+            zIndex: 2,
         }}
-      >
-        <div
-          style={{
-            width: "124px",
-            height: "124px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            overflow: "hidden",
-          }}
-        >
-          <img
-            src="book1.png"
-            alt="green potion"
-            style={{
-              width: "124px",
-              left: "50%",
-              top: "50%",
-              transition: "transform 0.1s ease",
-              transform: IsHoveringBook1 && mode === "idle" ? "scale(1.09)" : "scale(1)",
-              transformOrigin: "center",
-              imageRendering: "pixelated",
-            }}
-          />
-        </div>
-        {IsHoveringBook1 && mode === "idle" && (
-            <div
-            style={{
-                position: "absolute",
-                top: "122px",
-                backgroundColor: "#fff8c9",
-                border: "3px solid #6e361a",
-                borderRadius: "4px",
-                padding: "0.6rem 1rem",
-                fontSize: "0.8rem",
-                fontFamily: "'Quintessential', monospace",
-                color: "#3e1e00",
-                minWidth: "170px",
-                textAlign: "center",
-                boxShadow: "2px 2px 6px rgba(0, 0, 0, 0.2)",
-            }}
-            >
-              Chapter 1: How to Hex Your Ex.
-            </div>
-        )}
-      </div>
-
-      <div
-        onMouseEnter={() => setIsHoveringJar1(true)}
-        onMouseLeave={() => setIsHoveringJar1(false)}
-        style={{
-          position: "absolute",
-          left: "292px",
-          top: "190px",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          cursor: mode === "idle" ? "pointer" : "default",
-          zIndex: 2,
-        }}
-      >
-        <div
-          style={{
-            width: "126px",
-            height: "126px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            overflow: "hidden",
-          }}
-        >
-          <img
-            src="jar1.png"
-            alt="firefly jar"
-            style={{
-              width: "126px",
-              left: "50%",
-              top: "50%",
-              transition: "transform 0.1s ease",
-              transform: IsHoveringJar1 && mode === "idle" ? "scale(1.09)" : "scale(1)",
-              transformOrigin: "center",
-              imageRendering: "pixelated",
-            }}
-          />
-        </div>
-        {IsHoveringJar1 && mode === "idle" && (
-            <div
-            style={{
-                position: "absolute",
-                top: "118px",
-                backgroundColor: "#fff8c9",
-                border: "3px solid #6e361a",
-                borderRadius: "4px",
-                padding: "0.6rem 1rem",
-                fontSize: "0.8rem",
-                fontFamily: "'Quintessential', monospace",
-                color: "#3e1e00",
-                minWidth: "200px",
-                textAlign: "center",
-                boxShadow: "2px 2px 6px rgba(0, 0, 0, 0.2)",
-            }}
-            >
-              "Very legal. Definitely mine." - sketchy firefly dealer
-            </div>
-        )}
-      </div>
-
-      <div
         onMouseEnter={() => setIsHoveringPotion3(true)}
         onMouseLeave={() => setIsHoveringPotion3(false)}
-        style={{
-          position: "absolute",
-          right: "360px",
-          top: "310px",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          cursor: mode === "idle" ? "pointer" : "default",
-          zIndex: 2,
-        }}
       >
-        <div
-          style={{
-            width: "125px",
-            height: "125px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            overflow: "hidden",
-          }}
-        >
-          <img
+
+        <img
             src="potion3.png"
             alt="green potion"
             style={{
-              width: "125px",
-              left: "50%",
-              top: "50%",
-              transition: "transform 0.1s ease",
-              transform: IsHoveringPotion3 && mode === "idle" ? "scale(1.1)" : "scale(1)",
-              transformOrigin: "center",
-              imageRendering: "pixelated",
+            width: "100%",
+            height: "auto",
+            display: "block",
+            imageRendering: "pixelated",
+            transition: "transform 0.1s ease",
+            transform: IsHoveringPotion3 && mode === "idle" ? "scale(1.1)" : "scale(1)",
+            transformOrigin: "center",
             }}
-          />
-        </div>
+        />
+
         {IsHoveringPotion3 && mode === "idle" && (
-            <div
+           <div
             style={{
-                position: "absolute",
-                top: "123px",
-                backgroundColor: "#fff8c9",
-                border: "3px solid #6e361a",
-                borderRadius: "4px",
-                padding: "0.6rem 1rem",
-                fontSize: "0.8rem",
-                fontFamily: "'Quintessential', monospace",
-                color: "#3e1e00",
-                minWidth: "170px",
-                textAlign: "center",
-                boxShadow: "2px 2px 6px rgba(0, 0, 0, 0.2)",
+            position: "absolute",
+            top: "100%",
+            left: "50%",
+            transform: "translateX(-50%)",
+            marginTop: "10px",
+            backgroundColor: "#fff8c9",
+            border: "3px solid #6e361a",
+            borderRadius: "4px",
+            padding: "0.6rem 1rem",
+            fontSize: "0.8rem",
+            fontFamily: "'Quintessential', monospace",
+            color: "#3e1e00",
+            minWidth: "200px",
+            textAlign: "center",
+            boxShadow: "2px 2px 6px rgba(0, 0, 0, 0.2)",
+            whiteSpace: "normal",
             }}
-            >
-              Tastes like sour apples and regret.
-            </div>
+          >
+            Do not combine with moonlight or tax fraud. Trust.
+          </div>
+        )}
+      </div>
+
+      <div
+        style={{
+            position: "absolute",
+            left: "22.2%",          
+            top: "33.8%",             
+            transform: "translate(-50%, -50%)",
+            width: "3.8%",
+            zIndex: 2,
+        }}
+        onMouseEnter={() => setIsHoveringJar1(true)}
+        onMouseLeave={() => setIsHoveringJar1(false)}
+      >
+
+        <img
+            src="jar1.png"
+            alt="firefly jar"
+            style={{
+            width: "100%",
+            height: "auto",
+            display: "block",
+            imageRendering: "pixelated",
+            transition: "transform 0.1s ease",
+            transform: IsHoveringJar1 && mode === "idle" ? "scale(1.1)" : "scale(1)",
+            transformOrigin: "center",
+            }}
+        />
+
+        {IsHoveringJar1 && mode === "idle" && (
+          <div
+            style={{
+            position: "absolute",
+            top: "100%",
+            left: "50%",
+            transform: "translateX(-50%)",
+            marginTop: "8px",
+            backgroundColor: "#fff8c9",
+            border: "3px solid #6e361a",
+            borderRadius: "4px",
+            padding: "0.6rem 1rem",
+            fontSize: "0.8rem",
+            fontFamily: "'Quintessential', monospace",
+            color: "#3e1e00",
+            minWidth: "200px",
+            textAlign: "center",
+            boxShadow: "2px 2px 6px rgba(0, 0, 0, 0.2)",
+            whiteSpace: "normal",
+            }}
+          >
+            "Very legal. Definitely mine." - sketchy firefly dealer
+          </div>
+        )}
+      </div>
+
+      <div
+        style={{
+            position: "absolute",
+            left: "82%",          
+            top: "33.4%",             
+            transform: "translate(-50%, -50%)",
+            width: "2.1%",
+            zIndex: 2,
+        }}
+        onMouseEnter={() => setIsHoveringBook1(true)}
+        onMouseLeave={() => setIsHoveringBook1(false)}
+      >
+
+        <img
+            src="book1.png"
+            alt="orange book"
+            style={{
+            width: "100%",
+            height: "auto",
+            display: "block",
+            imageRendering: "pixelated",
+            transition: "transform 0.1s ease",
+            transform: IsHoveringBook1 && mode === "idle" ? "scale(1.1)" : "scale(1)",
+            transformOrigin: "center",
+            }}
+        />
+
+        {IsHoveringBook1 && mode === "idle" && (
+          <div
+            style={{
+            position: "absolute",
+            top: "100%",
+            left: "50%",
+            transform: "translateX(-50%)",
+            marginTop: "10px",
+            backgroundColor: "#fff8c9",
+            border: "3px solid #6e361a",
+            borderRadius: "4px",
+            padding: "0.6rem 1rem",
+            fontSize: "0.8rem",
+            fontFamily: "'Quintessential', monospace",
+            color: "#3e1e00",
+            minWidth: "200px",
+            textAlign: "center",
+            boxShadow: "2px 2px 6px rgba(0, 0, 0, 0.2)",
+            whiteSpace: "normal",
+            }}
+          >
+            Chapter 1: How to Hex Your Ex.
+          </div>
         )}
       </div>
 
