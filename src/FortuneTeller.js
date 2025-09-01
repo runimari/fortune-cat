@@ -126,12 +126,13 @@ export default function FortuneTeller() {
       <div
         style={{
           position: "absolute",
-          top: "86%",
+          top: "80%",
           left: "5%",
           transform: "translateY(-50%) rotate(-90deg)",
           transformOrigin: "left center",
           fontFamily: "'Amarante', monospace",
-          fontSize: "2rem",
+          fontSize: "clamp(15px, 1.5vw, 20px)",
+          lineHeight: 1,
           color: "#f2d5c7",
           letterSpacing: "2px",
           zIndex: 10,
