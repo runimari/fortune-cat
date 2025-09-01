@@ -142,7 +142,7 @@ export default function FortuneTeller() {
         <span
           style={{
             fontFamily: "'Aladin', monospace",
-            fontSize: "clamp(60px, 6vw, 80px)",
+            fontSize: "clamp(50px, 4vw, 70px)",
             lineHeight: 1, 
             marginRight: "3%",                         
           }}
