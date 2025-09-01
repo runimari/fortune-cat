@@ -124,19 +124,21 @@ export default function FortuneTeller() {
         onClick={handleClick}
         disabled={buttonDisabled}
         style={{
-          fontSize: "1rem",
-          padding: "1.0rem 1.5rem",
-          marginTop: "60px",
+          position: "absolute",
+          left: "50%",
+          top: "min(10vh, 80px)",
+          transform: "translateX(-50%)",
+          fontSize: "clamp(14px, 1.6vw, 18px)",
+          padding: "clamp(8px, 1.1vw, 14px) clamp(12px, 2vw, 22px)",
           backgroundColor: buttonDisabled ? "#ccc" : "#fff6ea",
-          color: buttonDisabled ? "#888" : "#3e1e00", 
-          border: "4px solid #3e1e00",
-          borderRadius: "12px",
+          color: buttonDisabled ? "#888" : "#3e1e00",
+          border: "max(2px, 0.35vw) solid #3e1e00",
+          borderRadius: "clamp(8px, 1vw, 14px)",
           boxShadow: "2px 2px 4px rgba(0,0,0,0.2)",
           cursor: buttonDisabled ? "not-allowed" : "pointer",
-          pointerEvents: buttonDisabled ? "none" : "auto", 
-          transition: "all 0.2s ease",
+          transition: "transform .15s ease, background-color .15s ease",
           fontFamily: "'Press Start 2P', monospace",
-          zIndex: 3,
+          zIndex: 5,
         }}
         onMouseOver={(e) => {
           e.target.style.backgroundColor = "#ffe5c4";
@@ -158,26 +160,30 @@ export default function FortuneTeller() {
             width: "20%",
             maxWidth: "60%",
             imageRendering: "pixelated",
+            zIndex: 3,
         }}
       />
       {fortuneText && (
         <div
           style={{
             position: "absolute",
-            bottom: "450px",
             left: "50%",
+            top: "calc(min(10vh, 80px) + 100px)",
             transform: "translateX(-50%)",
+            maxWidth: "min(25ch, 70%)",
             backgroundColor: "#b5aebf",
             border: "2px solid #3e1e00",
             borderRadius: "12px",
             padding: "0.75rem 1rem",
             fontFamily: "'Press Start 2P', monospace",
-            fontSize: "0.9rem",
+            fontSize: "clamp(10px, 1vw, 14px)", 
             color: "#3e1e00",
-            maxWidth: "250px",
-            wordWrap: "break-word",
+            textAlign: "center",
             boxShadow: "2px 2px 5px rgba(0, 0, 0, 0.2)",
             zIndex: 4,
+            wordWrap: "break-word",       // ensures long words break instead of overflowing
+            wordBreak: "break-word",      // extra safety
+            whiteSpace: "normal", 
           }}
         >
           {fortuneText}
