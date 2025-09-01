@@ -22,6 +22,8 @@ export default function FortuneTeller() {
   const [IsHoveringBook1, setIsHoveringBook1] = useState(false);
   const [IsHoveringJar1, setIsHoveringJar1] = useState(false);
   const [IsHoveringPotion3, setIsHoveringPotion3] = useState(false);
+  const [IsHoveringCandle1, setIsHoveringCandle1] = useState(false);
+  const [IsHoveringReadingCat1, setIsHoveringReadingCat1] = useState(false);
 
   const fortunes = [
     "Yes 🌟",
@@ -120,6 +122,143 @@ export default function FortuneTeller() {
         textAlign: "center",
       }}
     >
+
+      <div
+        style={{
+          position: "absolute",
+          top: "86%",
+          left: "5%",
+          transform: "translateY(-50%) rotate(-90deg)",
+          transformOrigin: "left center",
+          fontFamily: "'Amarante', monospace",
+          fontSize: "2rem",
+          color: "#f2d5c7",
+          letterSpacing: "2px",
+          zIndex: 10,
+          whiteSpace: "nowrap",
+        }}
+      >
+        <span
+          style={{
+            fontFamily: "'Aladin', monospace",
+            fontSize: "5rem", 
+            marginRight: "3%",                         
+          }}
+        >
+          Furtunes
+        </span>{" "}
+        by Madam Beans
+      </div>
+
+      <img
+        src="stars1.png"
+        alt="stars"
+        style={{
+            position: "absolute",
+            left: "93.5%",
+            top: "4%",
+            transform: "translateX(-50%)",
+            width: "3%",
+            maxWidth: "60%",
+            imageRendering: "pixelated",
+            zIndex: 9,
+        }}
+      />
+
+      <img
+        src="moon1.png"
+        alt="moon"
+        style={{
+            position: "absolute",
+            left: "97.5%",
+            top: "14%",
+            transform: "translateX(-50%)",
+            width: "2%",
+            maxWidth: "60%",
+            imageRendering: "pixelated",
+            zIndex: 9,
+        }}
+      />
+
+      <img
+        src="hat1.png"
+        alt="witch's hat"
+        style={{
+            position: "absolute",
+            left: "93%",
+            top: "20%",
+            transform: "translateX(-50%)",
+            width: "3%",
+            maxWidth: "60%",
+            imageRendering: "pixelated",
+            zIndex: 9,
+        }}
+      />
+
+      <div
+        style={{
+          position: "absolute",
+          top: "50%",
+          right: "1%",
+          transform: "translateY(-50%)",
+          fontFamily: "'Amarante', monospace",
+          fontSize: "clamp(10px, 0.9vw, 14px)",
+          color: "#f2d5c7",
+          textAlign: "center",
+          opacity: 0.8,
+          maxWidth: "15ch",
+          whiteSpace: "normal",
+          zIndex: 9,
+        }}
+      >
+        Explore the room... if you dare
+      </div>
+
+      <img
+        src="planchette1.png"
+        alt="planchette"
+        style={{
+            position: "absolute",
+            left: "95%",
+            top: "72%",
+            transform: "translateX(-50%)",
+            width: "2%",
+            maxWidth: "60%",
+            imageRendering: "pixelated",
+            zIndex: 9,
+        }}
+      />
+
+      <img
+        src="apple1.png"
+        alt="poison apple"
+        style={{
+            position: "absolute",
+            left: "92.5%",
+            top: "83%",
+            transform: "translateX(-50%)",
+            width: "2%",
+            maxWidth: "60%",
+            imageRendering: "pixelated",
+            zIndex: 9,
+        }}
+      />
+
+      <img
+        src="stars2.png"
+        alt="stars"
+        style={{
+            position: "absolute",
+            left: "97.5%",
+            top: "89%",
+            transform: "translateX(-50%)",
+            width: "2%",
+            maxWidth: "60%",
+            imageRendering: "pixelated",
+            zIndex: 9,
+        }}
+      />
+
       <button
         onClick={handleClick}
         disabled={buttonDisabled}
@@ -149,6 +288,7 @@ export default function FortuneTeller() {
       >
         {buttonText}
       </button>
+
       <img
         src={currentImage}
         alt="fortune cat"
@@ -163,6 +303,7 @@ export default function FortuneTeller() {
             zIndex: 3,
         }}
       />
+
       {fortuneText && (
         <div
           style={{
@@ -232,13 +373,13 @@ export default function FortuneTeller() {
             fontSize: "0.8rem",
             fontFamily: "'Quintessential', monospace",
             color: "#3e1e00",
-            minWidth: "200px",
+            minWidth: "clamp(18ch, 24ch, 30ch)",
             textAlign: "center",
             boxShadow: "2px 2px 6px rgba(0, 0, 0, 0.2)",
             whiteSpace: "normal",
             }}
           >
-            This is my top-secret potion base... well, it’s just purple food coloring and glitter.
+            Top-secret healing serum (tequila and food coloring).
           </div>
         )}
       </div>
@@ -285,7 +426,7 @@ export default function FortuneTeller() {
             fontSize: "0.8rem",
             fontFamily: "'Quintessential', monospace",
             color: "#3e1e00",
-            minWidth: "200px",
+            minWidth: "clamp(18ch, 24ch, 30ch)",
             textAlign: "center",
             boxShadow: "2px 2px 6px rgba(0, 0, 0, 0.2)",
             whiteSpace: "normal",
@@ -339,7 +480,7 @@ export default function FortuneTeller() {
             fontSize: "0.8rem",
             fontFamily: "'Quintessential', monospace",
             color: "#3e1e00",
-            minWidth: "200px",
+            minWidth: "clamp(18ch, 24ch, 30ch)",
             textAlign: "center",
             boxShadow: "2px 2px 6px rgba(0, 0, 0, 0.2)",
             whiteSpace: "normal",
@@ -392,7 +533,7 @@ export default function FortuneTeller() {
             fontSize: "0.8rem",
             fontFamily: "'Quintessential', monospace",
             color: "#3e1e00",
-            minWidth: "200px",
+            minWidth: "clamp(18ch, 24ch, 30ch)",
             textAlign: "center",
             boxShadow: "2px 2px 6px rgba(0, 0, 0, 0.2)",
             whiteSpace: "normal",
@@ -445,13 +586,119 @@ export default function FortuneTeller() {
             fontSize: "0.8rem",
             fontFamily: "'Quintessential', monospace",
             color: "#3e1e00",
-            minWidth: "200px",
+            minWidth: "clamp(18ch, 24ch, 30ch)",
             textAlign: "center",
             boxShadow: "2px 2px 6px rgba(0, 0, 0, 0.2)",
             whiteSpace: "normal",
             }}
           >
             Chapter 1: How to Hex Your Ex.
+          </div>
+        )}
+      </div>
+
+      <div
+        style={{
+            position: "absolute",
+            left: "12.5%",          
+            top: "16.4%",             
+            transform: "translate(-50%, -50%)",
+            width: "2.95%",
+            zIndex: 2,
+        }}
+        onMouseEnter={() => setIsHoveringCandle1(true)}
+        onMouseLeave={() => setIsHoveringCandle1(false)}
+      >
+
+        <img
+            src="candle1.png"
+            alt="candle on wall"
+            style={{
+            width: "100%",
+            height: "auto",
+            display: "block",
+            imageRendering: "pixelated",
+            transition: "transform 0.1s ease",
+            transform: IsHoveringCandle1 && mode === "idle" ? "scale(1.1)" : "scale(1)",
+            transformOrigin: "center",
+            }}
+        />
+
+        {IsHoveringCandle1 && mode === "idle" && (
+          <div
+            style={{
+            position: "absolute",
+            top: "50%",
+            left: "100%",
+            transform: "translateY(-50%)",
+            marginLeft: "8px",
+            backgroundColor: "#fff8c9",
+            border: "3px solid #6e361a",
+            borderRadius: "4px",
+            padding: "0.6rem 1rem",
+            fontSize: "0.8rem",
+            fontFamily: "'Quintessential', monospace",
+            color: "#3e1e00",
+            minWidth: "clamp(18ch, 20ch, 24ch)",
+            textAlign: "center",
+            boxShadow: "2px 2px 6px rgba(0, 0, 0, 0.2)",
+            whiteSpace: "normal",
+            }}
+          >
+            Smells like ‘I can fix him.’
+          </div>
+        )}
+      </div>
+
+      <div
+        style={{
+            position: "absolute",
+            left: "18.5%",          
+            top: "70.5%",             
+            transform: "translate(-50%, -50%)",
+            width: "11%",
+            zIndex: 2,
+        }}
+        onMouseEnter={() => setIsHoveringReadingCat1(true)}
+        onMouseLeave={() => setIsHoveringReadingCat1(false)}
+      >
+
+        <img
+            src="readingcat1.png"
+            alt="black cat reading a book"
+            style={{
+            width: "100%",
+            height: "auto",
+            display: "block",
+            imageRendering: "pixelated",
+            transition: "transform 0.1s ease",
+            transform: IsHoveringReadingCat1 && mode === "idle" ? "scale(1.1)" : "scale(1)",
+            transformOrigin: "center",
+            }}
+        />
+
+        {IsHoveringReadingCat1 && mode === "idle" && (
+          <div
+            style={{
+            position: "absolute",
+            top: "10%",
+            left: "75%",
+            transform: "translateY(-50%)",
+            marginLeft: "8px",
+            backgroundColor: "#fff8c9",
+            border: "3px solid #6e361a",
+            borderRadius: "4px",
+            padding: "0.6rem 1rem",
+            fontSize: "0.8rem",
+            fontFamily: "'Quintessential', monospace",
+            color: "#3e1e00",
+            minWidth: "clamp(18ch, 20ch, 24ch)",
+            textAlign: "center",
+            boxShadow: "2px 2px 6px rgba(0, 0, 0, 0.2)",
+            whiteSpace: "normal",
+            }}
+          >
+            Learning to sit on keyboards more efficiently.
           </div>
         )}
       </div>
