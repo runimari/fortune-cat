@@ -131,7 +131,7 @@ export default function FortuneTeller() {
           transform: "translateY(-50%) rotate(-90deg)",
           transformOrigin: "left center",
           fontFamily: "'Amarante', monospace",
-          fontSize: "clamp(15px, 1.5vw, 20px)",
+          fontSize: "clamp(15px, 1.5vw, 18px)",
           lineHeight: 1,
           color: "#f2d5c7",
           letterSpacing: "2px",
@@ -142,7 +142,8 @@ export default function FortuneTeller() {
         <span
           style={{
             fontFamily: "'Aladin', monospace",
-            fontSize: "5rem", 
+            fontSize: "clamp(60px, 6vw, 80px)",
+            lineHeight: 1, 
             marginRight: "3%",                         
           }}
         >
